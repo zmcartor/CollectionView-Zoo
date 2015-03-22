@@ -9,7 +9,7 @@
         <scene sceneID="obX-B7-4n2">
             <objects>
                 <collectionViewController id="GBC-xQ-Tfs" customClass="HomeviewCollection" customModule="CollectionViewFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tAH-rH-3vA">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="tAH-rH-3vA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wH7-r2-cBK">
@@ -26,8 +26,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-XZ-o0z">
-                                            <rect key="frame" x="24" y="16" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-XZ-o0z">
+                                            <rect key="frame" x="24" y="16" width="84" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -36,6 +36,11 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.81240577609999998" green="0.80786719640000004" blue="0.81694435590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dPN-XZ-o0z" firstAttribute="leading" secondItem="1N1-8n-Fif" secondAttribute="leadingMargin" constant="16" id="3J4-nb-ygG"/>
+                                    <constraint firstItem="dPN-XZ-o0z" firstAttribute="top" secondItem="1N1-8n-Fif" secondAttribute="topMargin" constant="8" id="LnP-Nb-Of5"/>
+                                    <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="dPN-XZ-o0z" secondAttribute="trailing" constant="250" id="qaK-lh-B5u"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="nameLabel" destination="dPN-XZ-o0z" id="8Vw-8W-DF6"/>
                                 </connections>

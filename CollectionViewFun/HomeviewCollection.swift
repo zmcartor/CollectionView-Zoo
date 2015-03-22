@@ -17,6 +17,8 @@ class HomeviewCollection: UICollectionViewController {
         
         let layout = collectionView!.collectionViewLayout as UICollectionViewFlowLayout
         layout.minimumInteritemSpacing = 3.0
+        
+        self.title = "Zoo"
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -30,9 +32,21 @@ class HomeviewCollection: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
        
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("homeCell", forIndexPath: indexPath) as navigationItemCellCollectionViewCell
-       
+        
         cell.nameLabel.text = itemsNames[indexPath.row]
         return cell
+    }
+    
+  
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+       
+        if indexPath.row == 0 {
+                self.performSegueWithIdentifier("pushToEdgesFade", sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //prepare, pass data if needed
     }
    
     func collectionView(collectionView: UICollectionView,

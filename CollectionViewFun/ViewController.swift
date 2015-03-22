@@ -42,11 +42,6 @@ class ViewController: UIViewController {
     }
 }
 
-
-extension ViewController : UICollectionViewDelegate {
-
-}
-
 // FlowLayout expects delegate methods to be implemeted here
 extension ViewController : UICollectionViewDataSource {
 

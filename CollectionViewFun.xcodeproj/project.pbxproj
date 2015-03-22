@@ -20,6 +20,8 @@
 		988486C71ABE66FC0054F0DB /* HomeviewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486C51ABE66FC0054F0DB /* HomeviewCollection.swift */; };
 		988486C91ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486C81ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift */; };
 		988486CA1ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486C81ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift */; };
+		98ABB0B61ABE79C500A9373B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486A21ABD19930054F0DB /* ViewController.swift */; };
+		98ABB0B71ABE79FD00A9373B /* CustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486C01ABD1AB90054F0DB /* CustomCellCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,10 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98ABB0B61ABE79C500A9373B /* ViewController.swift in Sources */,
 				988486C41ABD1F260054F0DB /* LayoutFadeEdges.swift in Sources */,
 				988486B71ABD19930054F0DB /* CollectionViewFunTests.swift in Sources */,
 				988486C71ABE66FC0054F0DB /* HomeviewCollection.swift in Sources */,
 				988486CA1ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift in Sources */,
+				98ABB0B71ABE79FD00A9373B /* CustomCellCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +431,7 @@
 				988486BC1ABD19930054F0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		988486BD1ABD19930054F0DB /* Build configuration list for PBXNativeTarget "CollectionViewFunTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +440,7 @@
 				988486BF1ABD19930054F0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
