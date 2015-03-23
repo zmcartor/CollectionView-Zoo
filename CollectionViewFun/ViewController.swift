@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var layoutFadeEdges: LayoutFadeEdges!
    
-    var items:NSMutableArray = []
+    var items:[String] = ["Z"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +23,17 @@ class ViewController: UIViewController {
         layoutFadeEdges.scrollDirection = .Vertical
         
         for char in "abcdefghijklmnopqrstuvwxyz" {
-            items.addObject("\(char)")
+            items.append("\(char)")
         }
         
         for char in "abcdefghijklmnopqrstuvwxyz" {
-            items.addObject("\(char)")
+            items.append("\(char)")
         }
         for char in "abcdefghijklmnopqrstuvwxyz" {
-            items.addObject("\(char)")
+            items.append("\(char)")
         }
         for char in "abcdefghijklmnopqrstuvwxyz" {
-            items.addObject("\(char)")
+            items.append("\(char)")
         }
     }
     
@@ -48,6 +48,9 @@ extension ViewController : UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
        
         var cell:CustomCellCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("customCell", forIndexPath: indexPath) as CustomCellCollectionViewCell
+        
+        cell.letterLabel.text = items[indexPath.row]
+        
         return cell
     }
    

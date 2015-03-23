@@ -9,8 +9,6 @@
 import UIKit
 
 class CustomCellCollectionViewCell: UICollectionViewCell {
-   
     
-    
-    
+    @IBOutlet weak var letterLabel: UILabel!
 }
