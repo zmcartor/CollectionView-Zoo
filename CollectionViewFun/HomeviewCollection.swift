@@ -12,6 +12,8 @@ class HomeviewCollection: UICollectionViewController {
     
     let itemsNames = ["Fade out edges" , "Transform edges", "Sticky headers"]
     
+    // TODOs - Paging layout , Pinteesty layout, UIDynamics , Gesture support, Data-driven layout
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,14 +41,19 @@ class HomeviewCollection: UICollectionViewController {
     
   
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-       
-        // TODO make a cool Swift swtich statement
-        if indexPath.row == 0 {
-                self.performSegueWithIdentifier("pushToEdgesFade", sender: self)
-        }
-        else if indexPath.row == 1 {
+      
+        switch indexPath.row {
+        case 0:
+            self.performSegueWithIdentifier("pushToEdgesFade", sender: self)
+        case 1:
             self.performSegueWithIdentifier("pushToTransform", sender: self)
+        case 2:
+            self.performSegueWithIdentifier("pushSticky", sender: self)
+            
+        default:
+            NSLog("nothing")
         }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
