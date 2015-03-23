@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var layoutFadeEdges: LayoutFadeEdges!
    
-    var items:[String] = ["Z"]
+    var items:[String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         layoutFadeEdges.itemSize = CGSizeMake(50, 50)
         layoutFadeEdges.scrollDirection = .Vertical
         
+        items = []
         for char in "abcdefghijklmnopqrstuvwxyz" {
             items.append("\(char)")
         }

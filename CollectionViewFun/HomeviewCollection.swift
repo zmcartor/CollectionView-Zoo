@@ -10,7 +10,7 @@ import UIKit
 
 class HomeviewCollection: UICollectionViewController {
     
-    let itemsNames = ["Fade out edges" , "transform edges", "stickey headers"]
+    let itemsNames = ["Fade out edges" , "Transform edges", "Sticky headers"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +40,12 @@ class HomeviewCollection: UICollectionViewController {
   
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
        
+        // TODO make a cool Swift swtich statement
         if indexPath.row == 0 {
                 self.performSegueWithIdentifier("pushToEdgesFade", sender: self)
+        }
+        else if indexPath.row == 1 {
+            self.performSegueWithIdentifier("pushToTransform", sender: self)
         }
     }
     
