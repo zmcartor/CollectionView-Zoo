@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         // Customize FlowLayoutClass
         let layout = collectionView.collectionViewLayout as UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(50, 50)
-        
+       
+        NSLog("Section inset : %@", NSStringFromUIEdgeInsets(layout.sectionInset));
         
         items = []
         for char in "abcdefghijklmnopqrstuvwxyz" {
