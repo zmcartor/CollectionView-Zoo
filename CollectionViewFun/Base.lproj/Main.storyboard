@@ -123,7 +123,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="collectionView" destination="bZA-v4-LA2" id="jlA-zB-a96"/>
-                        <outlet property="layoutFadeEdges" destination="F9v-cB-fqv" id="4dr-aS-vHl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -133,7 +132,7 @@
         <!--View Controller-->
         <scene sceneID="O0u-U6-9e9">
             <objects>
-                <viewController id="t41-WP-Jlc" sceneMemberID="viewController">
+                <viewController id="t41-WP-Jlc" customClass="ViewController" customModule="CollectionViewFun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YYi-2Z-GQH"/>
                         <viewControllerLayoutGuide type="bottom" id="nO5-Ke-IZp"/>
@@ -143,36 +142,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Osm-il-G4W">
-                                <rect key="frame" x="-6" y="36" width="414" height="700"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dum-St-1ap" customClass="TransformLayout" customModule="CollectionViewFun" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dum-St-1ap">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="THr-8T-xhA">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="THr-8T-xhA" customClass="CustomCellCollectionViewCell" customModule="CollectionViewFun" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOL-yR-uBy">
+                                                    <rect key="frame" x="8" y="14" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99417299723756902" green="0.074618598023712984" blue="0.1089815458559777" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.97600138121546964" green="0.9121544760759922" blue="0.07877007947588209" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="letterLabel" destination="uOL-yR-uBy" id="5Xj-Qn-QKd"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="t41-WP-Jlc" id="KgP-vZ-lnS"/>
+                                    <outlet property="delegate" destination="t41-WP-Jlc" id="RwT-fv-zkF"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Osm-il-G4W" firstAttribute="leading" secondItem="deQ-2I-E71" secondAttribute="leadingMargin" constant="-22" id="JDC-aB-uxc"/>
-                            <constraint firstItem="nO5-Ke-IZp" firstAttribute="top" secondItem="Osm-il-G4W" secondAttribute="bottom" id="mYh-qh-jxa"/>
-                            <constraint firstItem="Osm-il-G4W" firstAttribute="top" secondItem="YYi-2Z-GQH" secondAttribute="bottom" constant="-28" id="mgt-DQ-lwg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Osm-il-G4W" secondAttribute="trailing" constant="-10" id="qhv-Ev-MYc"/>
+                            <constraint firstItem="Osm-il-G4W" firstAttribute="leading" secondItem="deQ-2I-E71" secondAttribute="leadingMargin" constant="-16" id="BKg-Jc-hBu"/>
+                            <constraint firstItem="Osm-il-G4W" firstAttribute="top" secondItem="YYi-2Z-GQH" secondAttribute="bottom" constant="-20" id="Diq-Yb-VKi"/>
+                            <constraint firstItem="nO5-Ke-IZp" firstAttribute="top" secondItem="Osm-il-G4W" secondAttribute="bottom" id="pWX-6O-Gmi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Osm-il-G4W" secondAttribute="trailing" constant="-16" id="y7J-Nf-8N7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EiF-pz-AlI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Osm-il-G4W" id="awH-Fg-xvF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjq-Xj-LAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

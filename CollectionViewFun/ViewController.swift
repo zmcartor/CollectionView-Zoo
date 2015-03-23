@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var layoutFadeEdges: LayoutFadeEdges!
    
     var items:[String]!
     
@@ -19,8 +18,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        
         // Customize FlowLayoutClass
-        layoutFadeEdges.itemSize = CGSizeMake(50, 50)
-        layoutFadeEdges.scrollDirection = .Vertical
+        let layout = collectionView.collectionViewLayout as UICollectionViewFlowLayout
+        layout.itemSize = CGSizeMake(50, 50)
+        
         
         items = []
         for char in "abcdefghijklmnopqrstuvwxyz" {
