@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        
         // Customize FlowLayoutClass
-        let layout = collectionView.collectionViewLayout as UICollectionViewFlowLayout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(50, 50)
        
         NSLog("Section inset : %@", NSStringFromUIEdgeInsets(layout.sectionInset));
@@ -49,7 +49,7 @@ extension ViewController : UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
        
-        var cell:CustomCellCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("customCell", forIndexPath: indexPath) as CustomCellCollectionViewCell
+        var cell:CustomCellCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("customCell", forIndexPath: indexPath) as! CustomCellCollectionViewCell
         
         cell.letterLabel.text = items[indexPath.row]
         

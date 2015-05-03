@@ -17,7 +17,7 @@ class HomeviewCollection: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = collectionView!.collectionViewLayout as UICollectionViewFlowLayout
+        let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumInteritemSpacing = 3.0
         
         self.title = "Zoo"
@@ -33,7 +33,7 @@ class HomeviewCollection: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
        
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("homeCell", forIndexPath: indexPath) as navigationItemCellCollectionViewCell
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("homeCell", forIndexPath: indexPath) as! navigationItemCellCollectionViewCell
         
         cell.nameLabel.text = itemsNames[indexPath.row]
         return cell

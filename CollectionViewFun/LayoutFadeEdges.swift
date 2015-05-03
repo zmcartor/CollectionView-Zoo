@@ -24,7 +24,7 @@ class LayoutFadeEdges: UICollectionViewFlowLayout {
        
         // cast it to that type of optional. But still must unwrap it!
         let attributesArry = super.layoutAttributesForElementsInRect(rect)
-        for attributes in attributesArray! as [UICollectionViewLayoutAttributes] {
+        for attributes in attributesArray! as! [UICollectionViewLayoutAttributes] {
             
                 if attributes.representedElementCategory != .Cell {
                     continue
