@@ -57,7 +57,10 @@ class HomeviewCollection: UICollectionViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //prepare, pass data if needed
+        if segue.identifier! == "pushSticky" {
+            let stickyCollection:ViewController = segue.destinationViewController as! ViewController
+            stickyCollection.numberOfSections = 5
+        }
     }
    
     func collectionView(collectionView: UICollectionView,

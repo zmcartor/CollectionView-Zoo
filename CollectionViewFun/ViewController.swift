@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
    
     var items:[String]!
+    var numberOfSections = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,6 @@ extension ViewController : UICollectionViewDataSource {
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        return numberOfSections
     }
 }
