@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         // Customize FlowLayoutClass
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(50, 50)
+        layout.headerReferenceSize = CGSizeMake(collectionView.bounds.size.width, 50)
        
         NSLog("Section inset : %@", NSStringFromUIEdgeInsets(layout.sectionInset));
         

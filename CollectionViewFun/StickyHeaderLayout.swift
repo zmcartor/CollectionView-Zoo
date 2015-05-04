@@ -10,8 +10,16 @@ import UIKit
 
 class StickyHeaderLayout: UICollectionViewFlowLayout {
   
-    // determine bounds for given section
+    let sectionBounds = [Int : UICollectionViewLayoutAttributes]()
+   
+    override func prepareLayout() {
+       
+        collectionView!.numberOfSections()
+        
+        
+    }
     
+    // determine bounds for given section
     private func frameForSection(section: Int) -> CGRect {
         // index paths for first and last cell
         let numberOfItems:Int = collectionView!.numberOfItemsInSection(section)
@@ -42,16 +50,25 @@ class StickyHeaderLayout: UICollectionViewFlowLayout {
         if elementKind == UICollectionElementKindSectionHeader {
             let sectionFrame = frameForSection(indexPath.section)
             let topOfSection = max(collectionView!.contentOffset.y + collectionView!.contentInset.top, sectionFrame.origin.y)
-            
-            // where header should stop. take out space for next header and bottomInset.
-            // see pic http://dativestudios.com/blog/2015/01/10/collection_view_sticky_headers/
-            // bottom of section chosen when two sections bump up agaist each other
             let bottomOfSection = CGRectGetMaxY(sectionFrame) - headerReferenceSize.height - collectionView!.contentInset.bottom
+            
+            // TODO: when is top going to ever be less then bottom? When bouncing ?
             attributes.frame = CGRectMake(CGFloat(0), min(bottomOfSection,topOfSection), collectionView!.bounds.width, headerReferenceSize.height)
            
             //float over top cells
             attributes.zIndex = 1
         }
         return attributes
+    }
+
+    // TODO - register Xib for the
+
+//    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
+//        
+//        
+//    }
+    
+    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+        return true
     }
 }
