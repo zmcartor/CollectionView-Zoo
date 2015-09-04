@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         layout.itemSize = CGSizeMake(50, 50)
         layout.headerReferenceSize = CGSizeMake(collectionView.bounds.size.width, 50)
        
+        automaticallyAdjustsScrollViewInsets = false
+        
         NSLog("Section inset : %@", NSStringFromUIEdgeInsets(layout.sectionInset));
         
         items = []
@@ -39,6 +41,11 @@ class ViewController: UIViewController {
         for char in "abcdefghijklmnopqrstuvwxyz" {
             items.append("\(char)")
         }
+        
+        if numberOfSections != 0 {
+            collectionView.registerNib(UINib(nibName: "StickyHeader", bundle: nil), forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {

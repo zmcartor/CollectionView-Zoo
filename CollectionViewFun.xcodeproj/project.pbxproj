@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		984849561B1D215400A861E8 /* StickyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984849551B1D215400A861E8 /* StickyHeader.xib */; };
+		984849571B1D215400A861E8 /* StickyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984849551B1D215400A861E8 /* StickyHeader.xib */; };
 		988486A11ABD19930054F0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486A01ABD19930054F0DB /* AppDelegate.swift */; };
 		988486A31ABD19930054F0DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988486A21ABD19930054F0DB /* ViewController.swift */; };
 		988486A61ABD19930054F0DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988486A41ABD19930054F0DB /* Main.storyboard */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		984849551B1D215400A861E8 /* StickyHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickyHeader.xib; sourceTree = "<group>"; };
 		9884869B1ABD19930054F0DB /* CollectionViewFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9884869F1ABD19930054F0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		988486A01ABD19930054F0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,15 +100,16 @@
 			isa = PBXGroup;
 			children = (
 				988486A01ABD19930054F0DB /* AppDelegate.swift */,
-				98ABB0BB1ABF955300A9373B /* Layouts */,
-				988486A21ABD19930054F0DB /* ViewController.swift */,
-				988486A41ABD19930054F0DB /* Main.storyboard */,
-				988486C81ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift */,
-				988486C51ABE66FC0054F0DB /* HomeviewCollection.swift */,
 				988486C01ABD1AB90054F0DB /* CustomCellCollectionViewCell.swift */,
+				988486C51ABE66FC0054F0DB /* HomeviewCollection.swift */,
 				988486A71ABD19930054F0DB /* Images.xcassets */,
 				988486A91ABD19930054F0DB /* LaunchScreen.xib */,
+				98ABB0BB1ABF955300A9373B /* Layouts */,
+				988486A41ABD19930054F0DB /* Main.storyboard */,
+				988486C81ABE67B70054F0DB /* navigationItemCellCollectionViewCell.swift */,
+				984849551B1D215400A861E8 /* StickyHeader.xib */,
 				9884869E1ABD19930054F0DB /* Supporting Files */,
+				988486A21ABD19930054F0DB /* ViewController.swift */,
 			);
 			path = CollectionViewFun;
 			sourceTree = "<group>";
@@ -226,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				988486A61ABD19930054F0DB /* Main.storyboard in Resources */,
+				984849561B1D215400A861E8 /* StickyHeader.xib in Resources */,
 				988486AB1ABD19930054F0DB /* LaunchScreen.xib in Resources */,
 				988486A81ABD19930054F0DB /* Images.xcassets in Resources */,
 			);
@@ -235,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984849571B1D215400A861E8 /* StickyHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
