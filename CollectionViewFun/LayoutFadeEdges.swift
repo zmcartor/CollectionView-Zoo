@@ -18,7 +18,8 @@ class LayoutFadeEdges: UICollectionViewFlowLayout {
         // Midpoint changes
         // let midPoint = CGPointMake(CGRectGetMidX(collectionView!.bounds), CGRectGetMidY(collectionView!.bounds))
         
-        // Midpoint always stays the same. WHY ? Scrollview adjusts its origin to scroll, maybe it messes up GetMidX ?
+        // A scrollview works by changing it's bounds origin to move down the content. width/height do not change,
+        // midpoint is relative midpoint of the screen
         let midPoint = CGPointMake((CGRectGetWidth(collectionView!.bounds)*0.5) , (CGRectGetHeight(collectionView!.bounds) * 0.5))
         let contentOffset = collectionView!.contentOffset
        
